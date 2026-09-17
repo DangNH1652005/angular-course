@@ -1,0 +1,31 @@
+<div class="products">
+  <h2>Products component</h2>
+
+  <div class="product-list">
+    <div class="product-card">
+      <h3>Laptop</h3>
+      <p>Powerful laptop for developers.</p>
+      <span>$1200</span>
+      <a [routerLink]="['/pages/product-details', 101]" class="detail-link">View Detail</a>
+      <a routerLink="/pages/products" [queryParams]="{ category: 'laptop', sort: 'price'}">Query Param</a>
+    </div>
+
+    <div class="product-card">
+      <h3>Keyboard</h3>
+      <p>Mechanical keyboard for coding.</p>
+      <span>$100</span>
+      <a [routerLink]="['/pages/product-details', 102]" class="detail-link">View Detail</a>
+      <a routerLink="/pages/products" [queryParams]="{ category: 'keyboard', sort: 'price'}">Query Params</a>
+
+    </div>
+
+    <div class="product-card">
+      <h3>Mouse</h3>
+      <p>Comfortable mouse for everyday use.</p>
+      <span>$50</span>
+      <a [routerLink]="['/pages/product-details', 103]" class="detail-link">View Detail</a>
+      <a routerLink="/pages/products" [queryParams]="{ category: 'mouse', sort: 'price'}">Query Params</a>
+    </div>
+
+  </div>
+</div>

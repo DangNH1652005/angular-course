@@ -1,0 +1,41 @@
+<div class="register-container">
+  <div class="register-card">
+    <h1>Register</h1>
+
+    <p class="subtitle">
+      Create your account to get started.
+    </p>
+
+    <form (ngSubmit)="onRegister()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter your username" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Re-enter Password</label>
+        <input id="confirm-password" type="password" placeholder="Re-enter your password" />
+      </div>
+
+      <button type="submit" class="register-button">
+        Register
+      </button>
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a routerLink="/pages/login">Login</a>
+    </p>
+
+  </div>
+</div>

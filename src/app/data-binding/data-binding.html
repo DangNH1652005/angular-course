@@ -1,0 +1,61 @@
+<div class="data-binding-container">
+
+  <h2>Angular Data Binding</h2>
+
+  <!-- 1. Interpolation -->
+  <section class="binding-card">
+    <h3>1. Interpolation</h3>
+
+    <div class="result">
+      {{ name }}
+    </div>
+  </section>
+
+
+  <!-- 2. Property Binding -->
+  <section class="binding-card">
+    <h3>2. Property Binding</h3>
+
+    <label for="topic">Topic</label>
+    <input id="topic" type="text" [value]="topic">
+
+    <img [src]="imageUrl" alt="Horse" class="horse-image">
+  </section>
+
+
+  <!-- 3. Event Binding -->
+  <section class="binding-card">
+    <h3>3. Event Binding</h3>
+
+    <button type="button" class="primary-button" (click)="onSubmitClick()">
+      Click me
+    </button>
+
+    <div class="select-group">
+      <label for="country">Country</label>
+
+      <select id="country" (change)="onCountryChange()">
+        <option value="">Select Country</option>
+        <option value="India">India</option>
+        <option value="Viet Nam">Viet Nam</option>
+        <option value="America">America</option>
+        <option value="France">France</option>
+      </select>
+    </div>
+  </section>
+
+
+  <!-- 4. Two-way Data Binding -->
+  <section class="binding-card">
+    <h3>4. Two-way Data Binding</h3>
+
+    <label for="city">City</label>
+
+    <input id="city" type="text" [(ngModel)]="city" placeholder="Enter your city">
+
+    <div class="result">
+      {{ city }}
+    </div>
+  </section>
+
+</div>
