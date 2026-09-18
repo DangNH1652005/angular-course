@@ -2,4 +2,48 @@
   <h2>About component</h2>
   <p>This is the About page.</p>
   <p>Welcome to our Angular application.</p>
+
+  <div>
+    <b>Attribute Directive</b>
+    <div [ngClass]="isActive ? 'active' : 'inactive' ">
+      user status
+    </div>
+
+    <p [ngStyle]="{color:textColor}">
+      Welcome to Angular 22
+    </p>
+
+    <hr>
+    <b>Structural Directives</b>
+    @if (isLoggedIn) {
+      <p>Welcome back!</p>
+
+    }
+    <ul>
+      @for (user of users; track user) {
+        <li>
+          {{ user }}
+        </li>
+      }
+    </ul>
+  </div>
+  <div>
+    @switch (status) {
+      @case ('active') {
+        <p>User is active</p>
+      }
+      @case ('inactive') {
+        <p>User is inactive</p>
+      }
+      @default {
+        <p>Unknow status</p>
+      }
+    }
+  </div>
+  <div>
+    <b>Custom Directive</b>
+    <p appTextStyle>
+      Example of Custom Directive
+    </p>
+  </div>
 </div>

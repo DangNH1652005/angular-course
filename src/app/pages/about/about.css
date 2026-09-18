@@ -13,3 +13,12 @@
   color: #666;
   margin: 8px 0;
 }
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+.inactive {
+  background-color: red;
+}
