@@ -15,11 +15,9 @@
   3. ngModel
 
 # Built-in Control Flow
-  1. @Id
-  2. @for
-  3. @switch
-    - @Case
-    - @default
++ *ngIf
++ *ngFor
++ *ngSwitch
 
 # Custom Directives
   - Definition: User-defined directives that allow us to add custom behavior or modify the appearance or behavior of existing elements in an Angular application

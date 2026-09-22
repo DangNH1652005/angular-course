@@ -1,13 +1,56 @@
 <div class="contact">
   <h2>Contact component</h2>
+  <div>
+    <div class="contact">
+      <div class="header">
+        <div>
+          <span class="subtitle">API Playground</span>
+          <h1>Posts</h1>
+          <p>Manage and explore your posts.</p>
+        </div>
 
-  <form>
-    <input type="text" placeholder="Your name">
+        <div class="header-actions">
+          <button type="button" class="btn btn-primary" (click)="loadPosts()">
+            <span>↻</span>
+            GET POSTS
+          </button>
 
-    <input type="email" placeholder="Your email">
+          <button type="button" class="btn btn-secondary" (click)="createPost()">
+            <span>＋</span>
+            POST
+          </button>
+        </div>
+      </div>
 
-    <textarea placeholder="Your message"></textarea>
+      <div class="posts">
+        @for (post of posts(); track post.id) {
+        <article class="post-card">
+          <div class="post-header">
+            <span class="post-id">#{{ post.id }}</span>
+            <span class="user-id">User {{ post.userId }}</span>
+          </div>
 
-    <button type="submit">Send Message</button>
-  </form>
-</div>
+          <div class="post-content">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }}</p>
+          </div>
+
+          <div class="post-footer">
+            <span class="author">
+              👤 User {{ post.userId }}
+            </span>
+
+            <div class="post-actions">
+              <button type="button" class="action-btn edit" (click)="updatePost(post)">
+                PUT
+              </button>
+
+              <button (click)="deletePost(post.id)" type="button" class="action-btn delete">
+                DELETE
+              </button>
+            </div>
+          </div>
+        </article>
+        }
+      </div>
+    </div>

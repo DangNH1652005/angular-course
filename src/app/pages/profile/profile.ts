@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Profile {
   hasSavedChanges = true;
+
+  updateProfile() {
+    console.log('Inside profile component');
+  }
 }

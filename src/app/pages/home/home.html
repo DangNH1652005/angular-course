@@ -1,4 +1,16 @@
 <div class="home">
   <h2>Home component</h2>
-  <p>Welcome to the home page</p>
+  <p>{{ getMessage() }}</p>
+
+  <button class="btn" (click)="showMessage('John')">Click me</button>
+
+  <div>
+    <input type="text" class="input" #name>
+    <button class="btn" (click)="showName(name.value)">Input name</button>
+  </div>
+
+  <div>
+    <app-profile #profile></app-profile>
+    <button class="btn" type="button" (click)="profile.updateProfile()">Update</button>
+  </div>
 </div>

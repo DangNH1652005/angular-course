@@ -1,0 +1,11 @@
+<div class="parent">
+  <div class="parent-box">
+    <h2>parent works!</h2>
+    <p>Quantity: {{quantity()}}</p>
+  </div>
+
+  <div class="child-box">
+    <app-child [username]='userName' (saved)="handleSave()" (selected)="handleSelection($event)"
+      [(quantity)]="quantity"></app-child>
+  </div>
+</div>

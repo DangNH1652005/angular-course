@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {TextStyle} from '../../text-style';
+import { TextStyle } from '../../text-style';
 
 @Component({
   imports: [CommonModule, TextStyle],
@@ -12,7 +12,7 @@ export class About {
   isActive = true;
 
   textColor = 'blue';
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   users = ['John', 'Peter', 'Bob'];
   status = 'act';

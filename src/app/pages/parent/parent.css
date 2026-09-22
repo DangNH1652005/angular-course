@@ -1,0 +1,15 @@
+.parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.parent-box,
+.child-box {
+  flex: 1;
+  min-height: 200px;
+  border: 2px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+}

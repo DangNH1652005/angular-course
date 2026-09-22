@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <h2>Count: {{ count() }}</h2>
+    <div>
+      <button type="button" class="btn" (click)="increment()">Increment</button>
+      <button type="button" class="btn" (click)="decrement()">Decrement</button>
+      <button type="button" class="btn" (click)="reset()">Reset</button>
+    </div>
+  </div>
+
+  <div>
+    <h2>Total: {{ total() }}</h2>
+    <button type="button" class="btn" (click)="incrementQuantity()">Increment</button>
+    <button type="button" class="btn" (click)="resetQuantity()">Reset</button>
+  </div>
+
+  <div>
+    <h2>Cart total: {{ cartService.total() }}</h2>
+    <button type="button" class="btn" (click)="cartService.increaseQuantity()">Add Item</button>
+    <button type="button" class="btn" (click)="cartService.changePrice(200)">Change Price</button>
+
+  </div>
+</div>

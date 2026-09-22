@@ -18,14 +18,23 @@
     @if (isLoggedIn) {
       <p>Welcome back!</p>
 
+    }@else {
+      <p>Please login</p>
     }
+
+
+
     <ul>
       @for (user of users; track user) {
         <li>
           {{ user }}
         </li>
+      }@empty {
+        <p>No user found</p>
       }
     </ul>
+
+
   </div>
   <div>
     @switch (status) {
